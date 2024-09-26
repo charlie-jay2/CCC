@@ -108,13 +108,16 @@
         const data = Object.fromEntries(formData);
 
         try {
-          const response = await fetch(".netlify/functions/discord-webhook", {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-              "Content-Type": "application/json",
-            },
-          });
+          const response = await fetch(
+            "../netlify/functions/discord-webhook.js",
+            {
+              method: "POST",
+              body: JSON.stringify(data),
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          );
 
           if (response.ok) {
             alert("Form submitted successfully!");
