@@ -125,6 +125,7 @@ nav ul li a:hover {
   height: auto;
   margin-bottom: 10px;
 }
+
 .caret {
   display: inline-block;
   width: 0;
@@ -133,4 +134,93 @@ nav ul li a:hover {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid white; /* Change to the desired color */
+}
+
+.vacancies {
+  padding: 20px;
+}
+
+.vacancy-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vacancy-card h2 {
+  margin: 0 0 10px;
+}
+
+.vacancy-card p {
+  margin: 5px 0;
+}
+
+.apply-button {
+  display: inline-block;
+  background-color: #030c4e;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+.apply-button:hover {
+  background-color: #02507a; /* Darker shade for hover effect */
+}
+
+/* Form Styles */
+form {
+  background-color: white; /* White background for the form */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 10px; /* Slightly curved corners */
+  padding: 50px;
+  margin: 20px auto; /* Center the form */
+  max-width: 600px; /* Limit width for readability */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+label {
+  display: block;
+  margin: 10px 0; /* Spacing between labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+textarea {
+  width: 100%; /* Full width for inputs */
+  padding: 10px;
+  margin-top: 5px; /* Spacing above inputs */
+  border: 1px solid #ccc; /* Light gray border for inputs */
+  border-radius: 5px; /* Slightly rounded corners */
+}
+
+input[type="checkbox"] {
+  margin-right: 5px; /* Spacing before checkbox */
+}
+
+/* Button Styles for Form Submission */
+button[type="submit"] {
+  background-color: #030c4e; /* Themed button color */
+  color: white; /* Button text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Pointer cursor for buttons */
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #025a88; /* Darker shade on hover */
+}
+
+/* Availability Checkbox Styles */
+.availability-checkboxes {
+  margin-top: 10px; /* Spacing above checkboxes */
 }

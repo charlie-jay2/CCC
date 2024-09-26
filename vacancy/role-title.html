@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply for Role</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Information <span class="caret"></span></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Exams</a></li>
+            <li><a href="../policies.html">Policies</a></li>
+            <li><a href="#">Archive News</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Join Us <span class="caret"></span></a>
+          <ul class="dropdown-content">
+            <li><a href="../vacancies.html">Vacancies</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <h1>Application for [Role Title]</h1>
+
+    <form
+      name="vacancy-application"
+      netlify
+      data-netlify="true"
+      method="POST"
+      onsubmit="handleSubmit(event)">
+      <input type="hidden" name="form-name" value="vacancy-application" />
+
+      <label>
+        Name:
+        <input type="text" name="name" required />
+      </label>
+
+      <label>
+        Position Title:
+        <input
+          type="text"
+          name="position"
+          value="[Role Title]"
+          readonly
+          required />
+      </label>
+
+      <label>
+        Email:
+        <input type="email" name="email" required />
+      </label>
+
+      <label>
+        CV (not required):
+        <input type="file" name="cv" />
+      </label>
+
+      <label>
+        Why you want this role:
+        <textarea name="reason" required></textarea>
+      </label>
+
+      <label>
+        What can you bring to the team:
+        <textarea name="contribution" required></textarea>
+      </label>
+
+      <label>Availability:</label>
+      <div class="availability-checkboxes">
+        <label
+          ><input type="checkbox" name="availability" value="Monday" />
+          Monday</label
+        >
+        <label
+          ><input type="checkbox" name="availability" value="Tuesday" />
+          Tuesday</label
+        >
+        <label
+          ><input type="checkbox" name="availability" value="Wednesday" />
+          Wednesday</label
+        >
+        <label
+          ><input type="checkbox" name="availability" value="Thursday" />
+          Thursday</label
+        >
+        <label
+          ><input type="checkbox" name="availability" value="Friday" />
+          Friday</label
+        >
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      async function handleSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        try {
+          const response = await fetch(".netlify/functions/discord-webhook", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+
+          if (response.ok) {
+            alert("Form submitted successfully!");
+          } else {
+            alert("Error submitting form.");
+          }
+        } catch (error) {
+          alert("Error: " + error.message);
+        }
+      }
+    </script>
+  </body>
+</html>
