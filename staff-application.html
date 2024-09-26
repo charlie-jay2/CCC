@@ -79,6 +79,10 @@
             <input type="checkbox" name="availability" value="Sunday" /> Sunday
           </label>
         </fieldset>
+        <label>
+          CV (optional):
+          <input type="file" name="cv" accept=".pdf,.doc,.docx" />
+        </label>
 
         <button type="submit">Submit</button>
       </form>
@@ -106,10 +110,7 @@
         try {
           const response = await fetch(".netlify/functions/discord-webhook", {
             method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-              "Content-Type": "application/json",
-            },
+            body: formData, // Send FormData instead of JSON
           });
 
           if (response.ok) {
