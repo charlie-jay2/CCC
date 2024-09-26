@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {
             embeds: [
                 {
                     title: `New Application: ${data.name}`,
-                    description: `**Position Applied:** ${data.position}\n**Email:** ${data.email}\n**Why you want this role:** ${data.reason}\n**What you can bring to the team:** ${data.contribution}\n**Availability:** ${data.availability.join(', ') || 'Not specified'}`,
+                    description: `**Position Applied:** ${data.position}\n**Email:** ${data.email}`,
                     color: 3066993,
                     footer: {
                         text: `Application Code: ${applicationCode}`
