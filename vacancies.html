@@ -5,39 +5,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vacancies | Churchill Community College</title>
     <link rel="stylesheet" href="styles.css" />
-    <!-- Ensure to link your CSS -->
   </head>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const vacancyList = document.getElementById("vacancy-list");
-      const vacancies = vacancyList.getElementsByTagName("li");
+      const vacancies = vacancyList.getElementsByClassName("vacancy-card");
 
       // Check if there are any vacancies
       if (vacancies.length === 0) {
-        vacancyList.innerHTML = "<li>Currently no vacancies</li>";
+        vacancyList.innerHTML =
+          "<div class='vacancy-card'>Currently no vacancies</div>";
       }
     });
   </script>
   <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Information <span class="caret"></span></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Exams</a></li>
+            <li><a href="./policies.html">Policies</a></li>
+            <li><a href="#">Archive News</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Join Us <span class="caret"></span></a>
+          <ul class="dropdown-content">
+            <li><a href="./vacancies.html">Vacancies</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
     <header>
       <h1>Vacancies at Churchill Community College</h1>
     </header>
 
     <section class="vacancy-list">
       <h2>Current Vacancies</h2>
-      <ul id="vacancy-list">
-        <li></li>
-          <h3>Position Title 1</h3>
-          <p>Brief description of the role.</p>
-          <a href="staff-application.html">Apply Now</a>
-        </li>
-        <li>
-          <h3>Position Title 2</h3>
-          <p>Brief description of the role.</p>
-          <a href="staff-application.html">Apply Now</a>
-        </li>
-        <!-- Add more vacancies as needed -->
-      </ul>
+      <div id="vacancy-list">
+        <div class="vacancy-card">
+          <h3>Head of Core Subject: Physical Education</h3>
+          <p>
+            The Head of Core Subject: Physical Education is responsible for
+            leading the Physical Education department, ensuring a dynamic and
+            engaging curriculum that promotes physical fitness and well-being
+            among students. This role involves overseeing lesson planning,
+            implementing health and fitness initiatives, and fostering a culture
+            of teamwork and sportsmanship. The Head will also manage
+            extra-curricular activities, including sports teams and events,
+            while monitoring student participation and progress.
+          </p>
+          <br />
+          <p><strong>Location:</strong> Churchill Community College</p>
+          <p><strong>Region:</strong> Wallsend</p>
+          <p><strong>Salary:</strong> N/A Volunteership</p>
+          <p><strong>Job Reference:</strong> CTF002119</p>
+
+          <a href="physical-education.html" class="apply-button">Apply Now</a>
+        </div>
+        <div class="vacancy-card">
+          <h3>Head of Core Subject: English</h3>
+          <p>
+            The Head of Core Subject: English oversees the English department,
+            focusing on developing students’ reading, writing, and communication
+            skills. This role involves curriculum development, coordinating
+            assessments, and promoting a love of literature through innovative
+            teaching practices. The Head will work closely with teachers to
+            ensure high standards of instruction, support students' literacy
+            development, and encourage engagement with diverse literary texts
+            and contexts.
+          </p>
+          <br />
+          <p><strong>Location:</strong> Churchill Community College</p>
+          <p><strong>Region:</strong> Wallsend</p>
+          <p><strong>Salary:</strong> N/A Volunteership</p>
+          <p><strong>Job Reference:</strong> CTF010028</p>
+
+          <a href="english.html" class="apply-button">Apply Now</a>
+        </div>
+        <div class="vacancy-card">
+          <h3>Head of Core Subject: Mathematics</h3>
+          <p>
+            The Head of Core Subject: Mathematics leads the mathematics
+            department, ensuring a comprehensive curriculum that fosters
+            critical thinking and problem-solving skills among students. This
+            role includes developing teaching strategies, coordinating
+            assessments, and supporting teachers in delivering effective
+            instruction. The Head will also work to enhance student engagement
+            in mathematics through enrichment activities and real-world
+            applications of mathematical concepts.
+          </p>
+          <br />
+          <p><strong>Location:</strong> Churchill Community College</p>
+          <p><strong>Region:</strong> Wallsend</p>
+          <p><strong>Salary:</strong> N/A Volunteership</p>
+          <p><strong>Job Reference:</strong> CTF992212</p>
+
+          <a href="mathematics.html" class="apply-button">Apply Now</a>
+        </div>
+        <div class="vacancy-card">
+          <h3>Head of Subject: Science</h3>
+          <p>
+            The Head of Science is responsible for leading the science
+            department, ensuring that students receive a thorough understanding
+            of scientific principles and practices. This role involves
+            curriculum development, managing laboratory resources, and promoting
+            inquiry-based learning. The Head will collaborate with teachers to
+            create engaging lessons, oversee student safety in labs, and
+            encourage students to explore careers in science, technology,
+            engineering, and mathematics (STEM).
+          </p>
+          <br />
+          <p><strong>Location:</strong> Churchill Community College</p>
+          <p><strong>Region:</strong> Wallsend</p>
+          <p><strong>Salary:</strong> N/A Volunteership</p>
+          <p><strong>Job Reference:</strong> CTF692234</p>
+
+          <a href="science.html" class="apply-button">Apply Now</a>
+        </div>
+        <div class="vacancy-card">
+          <h3>Head of Subject: Modern Foreign Languages</h3>
+          <p>
+            The Head of Modern Foreign Languages leads the language department,
+            promoting proficiency in foreign languages and cultural awareness
+            among students. This role includes curriculum development,
+            coordinating language courses, and training teachers to deliver
+            effective instruction. The Head will create opportunities for
+            language immersion and cultural exchange, encouraging students to
+            develop their communication skills and appreciation for global
+            diversity.
+          </p>
+          <br />
+          <p><strong>Location:</strong> Churchill Community College</p>
+          <p><strong>Region:</strong> Wallsend</p>
+          <p><strong>Salary:</strong> N/A Volunteership</p>
+          <p><strong>Job Reference:</strong> CTF010010</p>
+
+          <a href="mfl.html" class="apply-button">Apply Now</a>
+        </div>
+        <div class="vacancy-card">
+          <h3>Head of Subject: Informative Studies</h3>
+          <p>
+            The Head of Informative Studies oversees the curriculum related to
+            information literacy, digital citizenship, and media studies. This
+            position involves developing programs that teach students how to
+            critically evaluate information sources and navigate the digital
+            landscape. The Head will work with other departments to integrate
+            information studies into the broader curriculum, fostering essential
+            skills for informed and responsible citizenship.
+          </p>
+          <br />
+          <p><strong>Location:</strong> Churchill Community College</p>
+          <p><strong>Region:</strong> Wallsend</p>
+          <p><strong>Salary:</strong> N/A Volunteership</p>
+          <p><strong>Job Reference:</strong> CTF001229</p>
+
+          <a href="is.html" class="apply-button">Apply Now</a>
+        </div>
+        <div class="vacancy-card">
+          <h3>Head of Subject: Creative Arts</h3>
+          <p>
+            The Head of Creative Arts leads the creative arts department, which
+            encompasses visual arts, music, drama, and design technology. This
+            role focuses on nurturing students' creativity and self-expression
+            through diverse artistic disciplines. The Head will manage
+            resources, organize exhibitions and performances, and collaborate
+            with teachers to deliver a stimulating and inspiring arts curriculum
+            that encourages exploration and innovation.
+          </p>
+          <br />
+          <p><strong>Location:</strong> Churchill Community College</p>
+          <p><strong>Region:</strong> Wallsend</p>
+          <p><strong>Salary:</strong> N/A Volunteership</p>
+          <p><strong>Job Reference:</strong> CTF092110</p>
+
+          <a href="ca.html" class="apply-button">Apply Now</a>
+        </div>
+        <div class="vacancy-card">
+          <h3>Head of Year 11</h3>
+          <p>
+            The Head of Year 11 is responsible for the academic and personal
+            development of students in their final year of secondary education.
+            This role includes monitoring student progress, implementing support
+            strategies for academic achievement, and coordinating exam
+            preparation activities. The Head will foster a positive year group
+            culture, engage with parents, and guide students through their
+            transition to post-secondary education.
+          </p>
+          <br />
+          <p><strong>Location:</strong> Churchill Community College</p>
+          <p><strong>Region:</strong> Wallsend</p>
+          <p><strong>Salary:</strong> N/A Volunteership</p>
+          <p><strong>Job Reference:</strong> CTF110021</p>
+
+          <a href="hoy-11.html" class="apply-button">Apply Now</a>
+        </div>
+        <div class="vacancy-card">
+          <h3>Head of Year 10</h3>
+          <p>
+            The Head of Year 10 oversees the academic and social development of
+            students as they begin their journey towards their GCSE
+            examinations. This role involves tracking student progress,
+            implementing intervention strategies, and promoting a positive
+            school environment. The Head will collaborate with teachers and
+            parents to support students' success and engagement in their
+            studies, ensuring they are well-prepared for the challenges ahead.
+          </p>
+          <br />
+          <p><strong>Location:</strong> Churchill Community College</p>
+          <p><strong>Region:</strong> Wallsend</p>
+          <p><strong>Salary:</strong> N/A Volunteership</p>
+          <p><strong>Job Reference:</strong> CTF883566</p>
+
+          <a href="hoy-10.html" class="apply-button">Apply Now</a>
+        </div>
+        <div class="vacancy-card">
+          <h3>Head of Year 9</h3>
+          <p>
+            The Head of Year 9 is responsible for guiding students through their
+            transition into Key Stage 4, supporting their academic and personal
+            growth. This role includes monitoring student progress, organizing
+            year-specific events, and addressing pastoral issues. The Head will
+            work closely with teachers and parents to foster a supportive
+            environment, helping students navigate their choices as they prepare
+            for their future academic paths.
+          </p>
+          <br />
+          <p><strong>Location:</strong> Churchill Community College</p>
+          <p><strong>Region:</strong> Wallsend</p>
+          <p><strong>Salary:</strong> N/A Volunteership</p>
+          <p><strong>Job Reference:</strong> CTF756321</p>
+
+          <a href="hoy-9.html" class="apply-button">Apply Now</a>
+        </div>
+      </div>
     </section>
   </body>
 </html>

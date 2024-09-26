@@ -224,3 +224,43 @@ button[type="submit"]:hover {
 .availability-checkboxes {
   margin-top: 10px; /* Spacing above checkboxes */
 }
+
+.vacancy-card {
+  background-color: #f9f9f9; /* Light gray background for vacancy cards */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px; /* Slightly rounded corners */
+  padding: 20px; /* Padding inside the card */
+  margin: 30px auto; /* 30px margin on top and bottom, auto for left and right */
+  transition: transform 0.2s; /* Smooth scaling on hover */
+  max-width: 65%; /* Ensure the card fits within the section */
+  text-align: left;
+}
+
+.vacancy-card:hover {
+  transform: scale(1.02); /* Slightly enlarge card on hover */
+}
+
+.vacancy-card h3 {
+  margin: 0 0 10px;
+  color: #030c4e; /* Themed color for titles */
+}
+
+.vacancy-card p {
+  margin: 5px 0;
+  color: #555; /* Dark gray for description text */
+}
+
+.apply-button {
+  display: inline-block;
+  background-color: #030c4e;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.apply-button:hover {
+  background-color: #02507a; /* Darker shade for hover effect */
+}
