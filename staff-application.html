@@ -37,9 +37,48 @@
         </label>
 
         <label>
+          Why do you want this role:
+          <input type="text" name="whyyouwant" required />
+        </label>
+
+        <label>
+          What is your past experience?
+          <input type="text" name="pastexp" required />
+        </label>
+
+        <label>
           Email:
           <input type="email" name="email" required />
         </label>
+
+        <fieldset>
+          <legend>Availability:</legend>
+          <label>
+            <input type="checkbox" name="availability" value="Monday" /> Monday
+          </label>
+          <label>
+            <input type="checkbox" name="availability" value="Tuesday" />
+            Tuesday
+          </label>
+          <label>
+            <input type="checkbox" name="availability" value="Wednesday" />
+            Wednesday
+          </label>
+          <label>
+            <input type="checkbox" name="availability" value="Thursday" />
+            Thursday
+          </label>
+          <label>
+            <input type="checkbox" name="availability" value="Friday" /> Friday
+          </label>
+          <label>
+            <input type="checkbox" name="availability" value="Saturday" />
+            Saturday
+          </label>
+          <label>
+            <input type="checkbox" name="availability" value="Sunday" /> Sunday
+          </label>
+        </fieldset>
 
         <button type="submit">Submit</button>
       </form>
@@ -52,6 +91,17 @@
         const form = event.target;
         const formData = new FormData(form);
         const data = Object.fromEntries(formData);
+
+        // Handle checkboxes for availability
+        const availabilityCheckboxes = form.querySelectorAll(
+          'input[name="availability"]:checked'
+        );
+        const availability = Array.from(availabilityCheckboxes)
+          .map((checkbox) => checkbox.value)
+          .join(", ");
+
+        // Add availability to data
+        data.availability = availability;
 
         try {
           const response = await fetch(".netlify/functions/discord-webhook", {
