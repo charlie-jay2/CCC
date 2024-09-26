@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Information <span class="caret"></span></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Exams</a></li>
+            <li><a href="./policies.html">Policies</a></li>
+            <li><a href="#">Archive News</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Join Us <span class="caret"></span></a>
+          <ul class="dropdown-content">
+            <li><a href="#">Vacancies</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="logo-area">
+        <a href="./index.html"
+          ><img src="logo.png" alt="School Logo" class="logo"
+        /></a>
+      </div>
+
+      <!-- Information Section -->
+      <div class="info-area">
+        <h2>Information Area</h2>
+        <p style="text-align: justify">
+          Churchill Community College is a mixed comprehensive school in ROBLOX
+          for 13 - 18 year olds, located in Wallsend, Newcastle, England. We aim
+          to achieve to bring communities together through educating pupils. We
+          work to bring our students a brighter future, and prepare them for the
+          wonders and journeys they will take later in life.<br />
+          <br />
+          We want all our students to value their personal development as well
+          as pursue academic excellence. We offer a full and comprehensive
+          extra-curricular programme which includes a variety of events and
+          trips to assist our students in pursuing their dreams.<br />
+          <br />
+          We nurture close ties with the local community to offer our students
+          opportunities to develop a character marked by a deep moral integrity
+          and refined social acumen. Our pupils emerge as individuals capable of
+          making significant and lasting impacts not only within their local
+          environment but also on national and global stages.
+        </p>
+      </div>
+
+      <!-- Events and Twitter Section -->
+      <div class="bottom-section">
+        <div class="events-section">
+          <h3>Upcoming Events</h3>
+          <div class="events-container" id="events-container">
+            <!-- Events will be populated here by events.js -->
+          </div>
+          <button class="scroll-btn" id="scroll-up">Up</button>
+          <button class="scroll-btn" id="scroll-down">Down</button>
+        </div>
+
+        <div class="ofsted-section">
+          <h3>Ofsted Report</h3>
+          <a
+            href="https://ofsted.netlify.app/provider/28/966219"
+            target="_blank"
+            class="ofsted-section">
+            <img src="ofsted-logo.png" alt="Ofsted Logo" class="ofsted-logo" />
+            <p>View our latest Ofsted report</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="events.js"></script>
+  </body>
+</html>

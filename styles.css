@@ -1,0 +1,136 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+nav {
+  background-color: #030c4e;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  background-color: #ffffff22;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #030c4e;
+  min-width: 150px;
+  z-index: 1;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content li a {
+  color: white;
+  text-align: left;
+  padding: 10px;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.logo-area {
+  margin: 20px 0;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.school-image {
+  width: 300px;
+  height: auto;
+  margin-left: 20px;
+}
+
+.info-area {
+  margin: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+}
+
+.events-section,
+.twitter-section {
+  width: 45%;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.events-container {
+  max-height: 200px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.scroll-btn {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #030c4e;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.scroll-btn:hover {
+  background-color: #050a40;
+}
+
+.ofsted-section {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.ofsted-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid white; /* Change to the desired color */
+}
