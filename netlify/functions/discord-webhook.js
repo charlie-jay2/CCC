@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {
             embeds: [
                 {
                     title: `New Application: ${data.name}`,
-                    description: `**Position Applied:** ${data.position}\n**Email:** ${data.email}\n**Why they want this role:** ${data.whyyouwant}\n**Past experience:** ${data.pastexp}\n**Availability:** ${data.availability}\n**Timeframe:** ${data.timeframe}`,
+                    description: `**Discord & Roblox Name:** ${data.name}\n**What is your teaching name:**${data.tname}\n**What is your teaching code:**${data.tcode}\n**What position:**${data.position}\n**What makes you stand out from others:**${data.standout}\n**Why would you like to work at Churchill Community College**${data.whyyoudlike}\n**What do you think you could face in this role?**${data.face}\n**Past Experience:**${data.pastexp}\n**Email:**${data.email}\n**Availability:**${data.availability}\n**For the availability you chose. What timeframes are you free**${data.timeframe}\n**You recognise an ongoing fight, how do you deal with it?**${data.ongoing}`,
                     color: 3066993,
                     footer: {
                         text: `Application Code: ${applicationCode}`
