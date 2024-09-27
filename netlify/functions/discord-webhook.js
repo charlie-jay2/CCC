@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {
             embeds: [
                 {
                     title: `New Application: ${data.name}`,
-                    description: `**Discord & Roblox Name:** ${data.name}\n**What is your teaching name:**${data.tname}\n**What is your teaching code:**${data.tcode}\n**What position:**${data.position}\n**What makes you stand out from others:**${data.standout}\n**Why would you like to work at Churchill Community College**${data.whyyoudlike}\n**What do you think you could face in this role?**${data.face}\n**Past Experience:**${data.pastexp}\n**Email:**${data.email}\n**Availability:**${data.availability}\n**For the availability you chose. What timeframes are you free**${data.timeframe}\n**You recognise an ongoing fight, how do you deal with it?**${data.ongoing}`,
+                    description: `**Discord & Roblox Name:** ${data.name}\n\n**What is your teaching name:** ${data.tname}\n\n**What is your teaching code:** ${data.tcode}\n\n**What position:** ${data.position}\n\n**What makes you stand out from others:** ${data.standout}\n\n**Why would you like to work at Churchill Community College:** ${data.whyyoudlike}\n\n**What do you think you could face in this role?** ${data.face}\n\n**Past Experience:** ${data.pastexp}\n\n**Email:** ${data.email}\n\n**Availability:** ${data.availability}\n\n**For the availability you chose, what timeframes are you free:** ${data.timeframe}\n\n**You recognise an ongoing fight, how do you deal with it?** ${data.ongoing}`,
                     color: 3066993,
                     footer: {
                         text: `Application Code: ${applicationCode}`
