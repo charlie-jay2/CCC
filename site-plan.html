@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Plan</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #030c4e;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      ul li {
+        margin: 10px 0;
+        position: relative;
+      }
+
+      ul li ul {
+        padding-left: 20px;
+      }
+
+      /* Remove underline and set link color to black */
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .main-section {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      /* Style for main list items */
+      ul li::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background-color: #030c4e;
+        top: 0;
+        left: -10px;
+        z-index: 1;
+      }
+
+      /* Arrow for sub-items */
+      ul li ul li::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 2px;
+        background-color: #030c4e;
+        top: 50%;
+        left: -20px;
+        transform: translateY(-50%);
+      }
+
+      ul li ul li::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background-color: #030c4e;
+        top: 0;
+        left: -20px;
+      }
+
+      /* Subsections style */
+      .sub-section {
+        color: black;
+        font-weight: normal;
+        position: relative;
+        padding-left: 10px; /* Indent to align with arrows */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-section">
+      <h1>Website Plan</h1>
+      <ul>
+        <li><a href="index.html">Index</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+        <li>
+          <a href="vacancies.html">Vacancies</a>
+          <ul>
+            <li class="sub-section"><a href="science.html">Science</a></li>
+            <li class="sub-section">
+              <a href="mathematics.html">Mathematics</a>
+            </li>
+            <li class="sub-section"><a href="mfl.html">MFL</a></li>
+            <li class="sub-section"><a href="is.html">IS</a></li>
+            <li class="sub-section"><a href="ca.html">CA</a></li>
+            <li class="sub-section"><a href="hoy-11.html">HOY-11</a></li>
+            <li class="sub-section"><a href="hoy-10.html">HOY-10</a></li>
+            <li class="sub-section"><a href="hoy-9.html">HOY-9</a></li>
+            <li class="sub-section"><a href="aht-s-w.html">AHT-S-W</a></li>
+            <li class="sub-section"><a href="aht-t-l.html">AHT-T-L</a></li>
+            <li class="sub-section"><a href="english.html">English</a></li>
+            <li class="sub-section">
+              <a href="physical-education.html">Physical Education</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="policies.html">Policies</a></li>
+        <li><a href="exams.html">Exams</a></li>
+        <li><a href="archive-news.html">Archive News</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
