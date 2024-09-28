@@ -2,6 +2,7 @@ const fetch = require('node-fetch');
 
 exports.handler = async function (event, context) {
     try {
+        console.log('Received event:', event); // Log the entire event for debugging
         const data = JSON.parse(event.body);
         const applicationCode = Math.floor(10000000 + Math.random() * 90000000).toString();
 
@@ -35,6 +36,7 @@ exports.handler = async function (event, context) {
             body: JSON.stringify({ message: 'Contact submitted successfully!' })
         };
     } catch (error) {
+        console.error('Error:', error); // Log the error for debugging
         return {
             statusCode: 500,
             body: JSON.stringify({ error: error.message })
