@@ -71,7 +71,7 @@
         data.availability = availability;
 
         try {
-          const response = await fetch(".netlify/functions/discord-webhook2", {
+          const response = await fetch(".netlify/functions/discord-webhook4", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
