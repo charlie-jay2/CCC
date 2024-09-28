@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {
             embeds: [
                 {
                     title: `New Application: ${data.name}`,
-                    description: `**Discord & Roblox Name:** ${data.name}\n**Start Date** ${data.start}\n**End Date** ${data.end}\n**Reason** ${data.reason}`,
+                    description: `**Teaching Name:** ${data.name}\n**Date Start:** ${data.start}\n**Date End:** ${data.end}\n**Reason:** ${data.reason}`,
                     color: 3066993,
                     footer: {
                         text: `Application Code: ${applicationCode}`
