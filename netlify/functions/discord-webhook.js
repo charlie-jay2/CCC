@@ -18,7 +18,7 @@ exports.handler = async function (event, context) {
             ]
         };
 
-        const response = await fetch(process.env.DISCORD_WEBHOOK_URL, {
+        const response = await fetch(process.env.DISCORD_WEBHOOK_URL3, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
