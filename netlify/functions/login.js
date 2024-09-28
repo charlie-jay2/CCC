@@ -1,6 +1,4 @@
-// netlify/functions/login.js
 exports.handler = async function (event, context) {
-    // Check if the method is POST
     if (event.httpMethod !== 'POST') {
         return {
             statusCode: 405,
@@ -10,7 +8,6 @@ exports.handler = async function (event, context) {
 
     let body;
     try {
-        // Attempt to parse the JSON body
         body = JSON.parse(event.body);
     } catch (error) {
         return {
@@ -20,12 +17,16 @@ exports.handler = async function (event, context) {
     }
 
     const { username, password } = body;
+    console.log('Received username:', username);
+    console.log('Received password:', password);
 
-    // Fetch environment variables
     const storedUsername = process.env.USER1N;
     const storedPassword = process.env.USER1P;
 
-    // Check if credentials match
+    // Debug log the stored credentials
+    console.log('Stored username:', storedUsername);
+    console.log('Stored password:', storedPassword);
+
     if (username === storedUsername && password === storedPassword) {
         return {
             statusCode: 200,
