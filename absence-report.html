@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staff Application | Your School Name</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Ensure to link your CSS -->
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="admin.html">Home</a></li>
+        <li><a href="./contact-us.html">Contact</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Absence Report</h1>
+    </header>
+
+    <section class="application-form">
+      <form
+        name="vacancy-application"
+        netlify
+        netlify-honeypot="bot-field"
+        data-netlify="true"
+        data-netlify-files="true"
+        method="POST"
+        enctype="multipart/form-data"
+        onsubmit="handleSubmit(event)">
+        <input type="hidden" name="form-name" value="vacancy-application" />
+        <label>
+          What is your teaching name:
+          <input
+            type="text"
+            placeholder="Martin Langstaff"
+            name="tname"
+            required />
+        </label>
+        <label>
+          Why will you be absent:
+          <input type="text" name="face" required />
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" required />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <script>
+      async function handleSubmit(event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        // Handle checkboxes for availability
+        const availabilityCheckboxes = form.querySelectorAll(
+          'input[name="availability"]:checked'
+        );
+        const availability = Array.from(availabilityCheckboxes)
+          .map((checkbox) => checkbox.value)
+          .join(", ");
+
+        // Add availability to data
+        data.availability = availability;
+
+        try {
+          const response = await fetch(".netlify/functions/discord-webhook5", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+
+          if (response.ok) {
+            alert("Form submitted successfully!");
+          } else {
+            alert("Error submitting form.");
+          }
+        } catch (error) {
+          alert("Error: " + error.message);
+        }
+      }
+    </script>
+  </body>
+</html>
