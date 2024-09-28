@@ -101,6 +101,17 @@
         const formData = new FormData(form);
         const data = Object.fromEntries(formData);
 
+        // Handle checkboxes for availability
+        const availabilityCheckboxes = form.querySelectorAll(
+          'input[name="availability"]:checked'
+        );
+        const availability = Array.from(availabilityCheckboxes)
+          .map((checkbox) => checkbox.value)
+          .join(", ");
+
+        // Add availability to data
+        data.availability = availability;
+
         try {
           const response = await fetch(".netlify/functions/loa-form", {
             method: "POST",

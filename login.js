@@ -5,7 +5,7 @@ document.getElementById("login-form").addEventListener("submit", async function 
     const passwordInput = document.getElementById("password").value;
 
     const response = await fetch("/.netlify/functions/login", {
-        method: "POST",
+        method: "POST", // Make sure this is POST
         body: JSON.stringify({
             username: usernameInput,
             password: passwordInput,
@@ -14,6 +14,7 @@ document.getElementById("login-form").addEventListener("submit", async function 
             "Content-Type": "application/json",
         },
     });
+
 
     const data = await response.json();
 
