@@ -8,7 +8,7 @@ exports.handler = async function (event, context) {
         const embed = {
             embeds: [
                 {
-                    title: `Teaching Name${data.name}`,
+                    title: `Teaching Name: ${data.name}`,
                     description: `**Start Date:** ${data.start}\n**End Date:** ${data.end}\n**Reason for LOA:** ${data.reason}`,
                     color: 3066993,
                     footer: {
