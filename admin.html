@@ -46,90 +46,26 @@
           <button class="scroll-btn" id="scroll-up">Up</button>
           <button class="scroll-btn" id="scroll-down">Down</button>
         </div>
-
+        <style>
+          .a {
+            text-decoration: underline;
+            color: black;
+          }
+        </style>
         <div class="loa-form-section">
-          <h3>Leave of Absence Request</h3>
-          <form
-            name="loa-request"
-            netlify
-            netlify-honeypot="bot-field"
-            data-netlify="true"
-            method="POST"
-            onsubmit="handleSubmit(event)">
-            <input type="hidden" name="form-name" value="loa-request" />
-
-            <label>
-              Teaching Name
-              <input
-                type="text"
-                name="name"
-                required
-                placeholder="Martin Langstaff" />
-            </label>
-            <label>
-              Date Start:
-              <input
-                type="text"
-                name="start"
-                required
-                placeholder="29/09/2024" />
-            </label>
-            <label>
-              Date End:
-              <input type="text" name="end" required placeholder="03/10/2024" />
-            </label>
-            <label>
-              Why you need a leave of absence:
-              <input
-                type="text"
-                name="reason"
-                required
-                placeholder="Teaching Course" />
-            </label>
-            <button type="submit">Submit</button>
-          </form>
+          <a href="./loa-request.html" class="a"
+            ><h3>Leave of Absence Request</h3></a
+          >
+          <a
+            href="https://docs.google.com/document/d/1P2kxTpmnEIH3B9w23-_udneNz34sLz_PtdplSEf_HJ8/edit?usp=sharing"
+            class="a"
+            ><h3>Letter Format</h3></a
+          >
+          <a href="./policies.html" class="a"><h3>Policies</h3></a>
         </div>
       </div>
     </div>
 
     <script src="staffevents.js"></script>
-    <script>
-      async function handleSubmit(event) {
-        event.preventDefault();
-
-        const form = event.target;
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
-
-        // Handle checkboxes for availability
-        const availabilityCheckboxes = form.querySelectorAll(
-          'input[name="availability"]:checked'
-        );
-        const availability = Array.from(availabilityCheckboxes)
-          .map((checkbox) => checkbox.value)
-          .join(", ");
-
-        // Add availability to data
-        data.availability = availability;
-
-        try {
-          const response = await fetch(".netlify/functions/discord-webhook4", {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-              "Content-Type": "application/json",
-            },
-          });
-
-          if (response.ok) {
-            alert("Form submitted successfully!");
-          } else {
-            alert("Error submitting form.");
-          }
-        } catch (error) {
-          alert("Error: " + error.message);
-        }
-      }
-    </script>
   </body>
 </html>
