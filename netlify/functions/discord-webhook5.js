@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {
             embeds: [
                 {
                     title: `Absence Report`,
-                    description: `**Email: **${data.email}\nTeaching Name: ${data.name}\n**Reason for Absence:** ${data.reason}`,
+                    description: `**Email: **${data.email}\n**Teaching Name:** ${data.name}\n**Reason for Absence:** ${data.reason}`,
                     color: 3066993,
                     footer: {
                         text: `Application Code: ${applicationCode}`
