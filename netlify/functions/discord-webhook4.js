@@ -8,8 +8,8 @@ exports.handler = async function (event, context) {
         const embed = {
             embeds: [
                 {
-                    title: `New Application: ${data.name}`,
-                    description: `**Discord & Roblox Name:** ${data.name}\n**How can we help:** ${data.standout}\n**Email:** ${data.email}\n**Preferred contact method:** ${data.availability}`,
+                    title: `Teaching Name${data.name}`,
+                    description: `**Start Date:** ${data.start}\n**End Date:** ${data.end}\n**Reason for LOA:** ${data.reason}`,
                     color: 3066993,
                     footer: {
                         text: `Application Code: ${applicationCode}`
