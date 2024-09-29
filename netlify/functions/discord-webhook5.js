@@ -32,7 +32,7 @@ exports.handler = async function (event, context) {
 
         return {
             statusCode: 200,
-            body: JSON.stringify({ message: 'Contact submitted successfully!' })
+            body: JSON.stringify({ message: 'Form submitted successfully! You will recieve an email shortly!' })
         };
     } catch (error) {
         return {

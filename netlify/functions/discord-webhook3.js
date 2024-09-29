@@ -8,7 +8,7 @@ exports.handler = async function (event, context) {
         const embed = {
             embeds: [
                 {
-                    title: `New Application: ${data.name}`,
+                    title: `New Contact: ${data.name}`,
                     description: `**Discord & Roblox Name:** ${data.name}\n**How can we help:** ${data.standout}\n**Email:** ${data.email}\n**Preferred contact method:** ${data.availability}`,
                     color: 3066993,
                     footer: {
@@ -32,7 +32,7 @@ exports.handler = async function (event, context) {
 
         return {
             statusCode: 200,
-            body: JSON.stringify({ message: 'Contact submitted successfully!' })
+            body: JSON.stringify({ message: 'Contact submitted successfully! You will recieve an email shortly.' })
         };
     } catch (error) {
         return {
